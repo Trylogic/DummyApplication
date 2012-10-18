@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<gui:ContainerBase xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:gui="http://www.trylogic.ru/gui" xmlns:trylogic="http://www.trylogic.ru/" xmlns:gestures="ru.trylogic.unitouch.gestures.*">
+
+	<gui:controllerClass>ru.trylogic.dummy.views.dummyApplicationView.DummyApplicationViewController</gui:controllerClass>
+
+	<gui:eventMaps>
+		<trylogic:EventMap source="{myButton}" type="tap" destination="{new Event('myButtonTapped')}" />
+	</gui:eventMaps>
+
+	<fx:Declarations>
+		<gestures:TapAndHoldGesture target="{myTextField.face}" tapDelay="300">
+			<gestures:gestureRecognized>
+			<![CDATA[
+					const myImageBitmapData : BitmapData = myImage.texture as BitmapData;
+					myImageBitmapData.fillRect( new Rectangle( 0, 0, myImageBitmapData.width, myImageBitmapData.height ), 0 );
+				]]>
+			</gestures:gestureRecognized>
+		</gestures:TapAndHoldGesture>
+	</fx:Declarations>
+
+	<gui:Image id="myImage" texture="{new BitmapData(100, 100, false, 0)}" />
+
+	<gui:TextField id="myTextField" text="Tap and hold on this text to clear image" x="150" y="50" fontSize="32" />
+
+	<gui:Button id="myButton" x="{(stage.stageWidth - myButton.width) * 0.5}" y="{(stage.stageHeight - myButton.height) * 0.5}" />
+
+</gui:ContainerBase>

@@ -5,6 +5,6 @@
 		[SWF(width="1024", height="768", frameRate="60")]
 	</fx:Metadata>
 
-	<native:applicationViewClass>ru.trylogic.dummy.views.DummyApplicationView</native:applicationViewClass>
+	<native:applicationViewClass>ru.trylogic.dummy.views.dummyApplicationView.DummyApplicationView</native:applicationViewClass>
 
 </native:Bootstrap>
