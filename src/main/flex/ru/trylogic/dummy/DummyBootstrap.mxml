@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<native:Bootstrap xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:native="http://www.trylogic.ru/native">
+
+	<fx:Metadata>
+		[SWF(width="1024", height="768", frameRate="60")]
+	</fx:Metadata>
+
+	<native:applicationViewClass>ru.trylogic.dummy.views.DummyApplicationView</native:applicationViewClass>
+
+</native:Bootstrap>
