@@ -1,12 +1,17 @@
 <?xml version="1.0"?>
 <gui:ContainerBase xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:gui="http://www.trylogic.ru/gui" xmlns:trylogic="http://www.trylogic.ru/" xmlns:gestures="ru.trylogic.unitouch.gestures.*"
-				   xmlns:textfield="ru.trylogic.gui.components.textField.*">
+				   xmlns:textfield="ru.trylogic.gui.components.textField.*" xmlns:s="library://ns.adobe.com/flex/spark">
 
 	<gui:controllerClass>ru.trylogic.dummy.views.dummyApplicationView.DummyApplicationViewController</gui:controllerClass>
 
 	<gui:eventMaps>
 		<trylogic:EventMap source="{myButton}" type="tap" destination="{new Event('myButtonTapped')}" />
 	</gui:eventMaps>
+
+	<gui:states>
+		<s:State id="defaultState" name="default" />
+		<s:State id="imageState" name="image" />
+	</gui:states>
 
 	<fx:Declarations>
 		<gestures:TapAndHoldGesture target="{myTextField.face}" tapDelay="300">
@@ -21,9 +26,11 @@
 		<textfield:TextFieldSkinStyle destination="{myTextField}" fontSize="32" fontColor="0xA8A8A8" fontName="Arial" />
 	</fx:Declarations>
 
-	<gui:Image id="myImage" texture="{new BitmapData(100, 100, false, 0)}" />
+	<gui:ContainerBase visible="false" visible.image="true">
+		<gui:Image id="myImage" texture="{new BitmapData(100, 100, false, 0)}" />
 
-	<gui:TextField id="myTextField" text="Tap and hold on this text to clear image" x="150" y="50" />
+		<gui:TextField id="myTextField" text="Tap and hold on this text to clear image" x="150" y="50" />
+	</gui:ContainerBase>
 
 	<gui:Button id="myButton" x="{(stage.stageWidth - myButton.width) * 0.5}" y="{(stage.stageHeight - myButton.height) * 0.5}" />
 

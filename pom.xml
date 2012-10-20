@@ -81,7 +81,6 @@
 			<artifactId>global-dispatcher</artifactId>
 			<version>[1.2.0-SNAPSHOT,]</version>
 			<type>swc</type>
-			<scope>internal</scope>
 		</dependency>
 
 		<dependency>
@@ -89,7 +88,6 @@
 			<artifactId>trylogic-gui</artifactId>
 			<version>[0.2.0-SNAPSHOT,]</version>
 			<type>swc</type>
-			<scope>merged</scope>
 		</dependency>
 
 		<dependency>
@@ -102,7 +100,7 @@
 		<dependency>
 			<groupId>ru.trylogic</groupId>
 			<artifactId>trylogic-framework</artifactId>
-			<version>[2.1.0-SNAPSHOT,]</version>
+			<version>[2.2.0-SNAPSHOT,]</version>
 			<type>swc</type>
 		</dependency>
 
@@ -127,8 +125,6 @@
 			<type>pom</type>
 		</dependency>
 
-
-
 		<dependency>
 			<groupId>com.gamua</groupId>
 			<artifactId>starling-framework</artifactId>
@@ -139,9 +135,8 @@
 		<dependency>
 			<groupId>ru.trylogic</groupId>
 			<artifactId>monkey-flex</artifactId>
-			<version>[1.0.0-SNAPSHOT,]</version>
+			<version>[1.0.1-SNAPSHOT,]</version>
 			<type>swc</type>
-			<scope>internal</scope>
 		</dependency>
 	</dependencies>
 

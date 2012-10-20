@@ -8,6 +8,8 @@ package ru.trylogic.dummy.views.dummyApplicationView
 {
 	import flash.display.BitmapData;
 
+	import mx.states.State;
+
 	import ru.trylogic.gui.components.button.Button;
 	import ru.trylogic.gui.components.image.Image;
 
@@ -24,6 +26,9 @@ package ru.trylogic.dummy.views.dummyApplicationView
 		outlet var myButton : Button;
 		outlet var myImage : Image;
 
+		outlet var defaultState : State;
+		outlet var imageState : State;
+
 		public function DummyApplicationViewController()
 		{
 		}
@@ -36,6 +41,8 @@ package ru.trylogic.dummy.views.dummyApplicationView
 		event function myButtonTapped() : void
 		{
 			myButton.text = "Well done!";
+
+			view.currentState = imageState.name;
 
 			(myImage.texture as BitmapData).noise(Math.random() * 100);
 		}
